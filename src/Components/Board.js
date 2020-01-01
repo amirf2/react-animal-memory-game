@@ -14,7 +14,7 @@ class Board extends Component {
               <div className="text-center">
                <img src="logo.png" alt="loading" className="image"/>
                </div>
-                  <div className="row">
+                  <div className="row w-20">
                      {images}
                    </div>
            </div>
