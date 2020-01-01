@@ -10,26 +10,23 @@ class App extends Component {
 
     this.state = {
         sidebarOpen: false,
-        type: "cats",
-        level: "hard",
-        game: () => <MemoryGame type={this.state.type} level={this.state.level}/>
+        imageType: "cats",
+        gameLevel: "hard",
+        game: () => <MemoryGame imageType={this.state.imageType} gameLevel={this.state.gameLevel}/>
     };
     
   }
 
   handleLevelChange = (event) =>{
-    console.log(event.target)
-    this.setState({level: event.target.value})
+    this.setState({gameLevel: event.target.value})
   }
 
   handleTypeChange = (event) => {
-    console.log(event.target)
-
-    this.setState({type: event.target.value})
+    this.setState({imageType: event.target.value})
   }
 
   handleResetGame = (event) => {
-    this.setState({game: ()=> <MemoryGame type={this.state.type} level={this.state.level}/>})
+    this.setState({game: ()=> <MemoryGame imageType={this.state.imageType} gameLevel={this.state.gameLevel}/>})
   }
 
   render(){
@@ -42,8 +39,8 @@ class App extends Component {
           handleLevelChange={this.handleLevelChange} 
           handleTypeChange={this.handleTypeChange} 
           handleResetGame={this.handleResetGame} 
-          type={this.state.type} 
-          level={this.state.level} 
+          imageType={this.state.imageType} 
+          gameLevel={this.state.gameLevel} 
         />
         <MemoryGame/>
       </div>

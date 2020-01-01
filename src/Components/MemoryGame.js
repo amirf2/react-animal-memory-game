@@ -52,17 +52,17 @@ class MemoryGame extends Component {
 
       //convert the level game String to the number of images pairs
       stringLevelToNumber = () => {
-        const {level} = this.props;
-        return level==="hard"? hardGamePairNums : level==="advanced"? advancedGamePairNums : level==="medium"? mediumGamePairNums : easyGamePairNums;
+        const {gameLevel} = this.props;
+        return gameLevel==="hard"? hardGamePairNums : gameLevel==="advanced"? advancedGamePairNums : gameLevel==="medium"? mediumGamePairNums : easyGamePairNums;
       }
 
 
       updateBoard = () =>{
-        const {type} = this.props;
+        const {imageType} = this.props;
         var boardSize = this.stringLevelToNumber();
         var urls = generateRandomNumbers(boardSize);
         urls = urls.map((element, index) => { 
-          return {key: index, url: type+"/"+element+".jpg"}
+          return {key: index, url: imageType+"/"+element+".jpg"}
         })
         this.setState({images: urls, boardSize: boardSize})
       }
@@ -73,10 +73,8 @@ class MemoryGame extends Component {
       }
       
       
-
       render(){
         const {images, selectedImages, foundPairs, boardSize} = this.state;
-        console.log(boardSize)
         var imagesComp = images.map(element => {
           return <Image 
                     key={element.key} 

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Settings from './Settings'
 import Sidebar from "react-sidebar";
 
+const hamburgerButtonStyle = "btn btn-outline-success hamburger-btn";
 
 class Bar extends Component {
 
@@ -33,8 +34,8 @@ class Bar extends Component {
                 handleLevelChange={this.props.handleLevelChange} 
                 handleTypeChange={this.props.handleTypeChange} 
                 handleResetGame={this.props.handleResetGame} 
-                type={this.props.type} 
-                level={this.props.level} 
+                imageType={this.props.imageType} 
+                gameLevel={this.props.gameLevel} 
               />
             </div>
           }
@@ -43,7 +44,7 @@ class Bar extends Component {
           styles={{ sidebar: { background: "DeepSkyBlue" , width: 200}}}
           touchHandleWidth={0}
         >
-        <img className="btn btn-outline-success hamburger-btn"  src="/hamburger.png"  alt="loading" style={{width: "8%", }} onClick={() => this.onSetSidebarOpen(true)} />
+        <img className={hamburgerButtonStyle}  src="/hamburger.png"  alt="loading" style={{width: "8%", }} onClick={() => this.onSetSidebarOpen(true)} />
       </Sidebar>
       </div>
     )

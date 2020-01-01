@@ -1,46 +1,24 @@
-/* .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    padding: 1px;
-  }
-  
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 1px;
-    font-size: 1px;
-    text-align: center;
-  }
- */
 
   .image-container {
     position: relative;
-    width: 100%; /* The size you want */
+    width: 100%;
   }
   .image-container:after {
     content: "";
     display: block;
-    padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+    padding-bottom: 100%; 
   }
 
   .image-container img {
-    position: absolute; /* Take your picture out of the flow */
+    position: absolute; 
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0; /* Make the picture taking the size of it's parent */
-    width: 100%; /* This if for the object-fit */
-    height: 100%; /* This if for the object-fit */
-    object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+    right: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
     object-position: center;
-  }
-    
-  @media (max-width: 568px) {
-    .container {
-        margin-left: 0;
-        margin-right: 0;
-    }
   }
 
   
@@ -49,10 +27,7 @@
     background-color: "black"
   }
 
-  .image {
-    width: 80%;
-
-  } 
+ 
 
   .img-thumbnail{
     margin-bottom: 15px;
@@ -65,15 +40,11 @@
     padding-right: 10px;
   }
 
-  .amir{
-    background-size: cover;
-    background-position: center;
-  }
 
   input[type="radio"] {
     margin-right: 10px;
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
     margin-left: 10px;
   }
@@ -94,5 +65,3 @@
     max-width:1000px;
   }
 
-
-  
