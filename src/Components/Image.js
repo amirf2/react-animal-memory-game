@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
 const hidden = "hidden.png"
-const gridStyleHard = "col-3 col-sm-3 col-md-2 col-lg-2"
-const gridStyleAdvanced = "col-3 col-sm-3 col-md-2 col-lg-2"
-const gridStyleMedium = "col-3"
+const gridStyleHard = "col-3 col-md-2"
+const gridStyleAdvanced = "col-4 col-md-2"
+const gridStyleMedium = "col-3 col-md-3"
 const gridStyleEasy = "col-4"
 const gridStyleArr=[gridStyleEasy,gridStyleMedium,gridStyleAdvanced,gridStyleHard]
 
