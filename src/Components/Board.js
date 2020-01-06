@@ -12,7 +12,7 @@ class Board extends Component {
           <div>
            <div className="container-fluid">  
               <div className="text-center">
-               <img src="logo.png" alt="loading" className="image"/>
+               <img src="pictures/titles/logo.png" alt="loading" className="image"/>
                </div>
                   <div className="row">
                      {images}

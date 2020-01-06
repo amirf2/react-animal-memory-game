@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+const typeTitle = "pictures/titles/type.png"
+const levelTitle = "pictures/titles/level.png"
 
 
 class Option extends Component {
@@ -7,7 +9,7 @@ class Option extends Component {
 
     render(){
         const {optionType, optionsData, selected, onChange} = this.props;
-        var res = optionsData.map((name,index) =>
+        var res = optionsData.map((name) =>
             <div key={name}>
                 <input 
                     type="radio"
@@ -22,7 +24,7 @@ class Option extends Component {
 
         return (
             <div>
-                {optionType==="Animal"?  <img src="type.png" style={{width: "50%"}} alt="none" /> : <img src="level.png" style={{width: "50%"}} alt="none" />}
+                {optionType==="Animal"?  <img src={typeTitle} style={{width: "50%"}} alt="none" /> : <img src={levelTitle} style={{width: "50%"}} alt="none" />}
                 {res}   
             </div>
         )
