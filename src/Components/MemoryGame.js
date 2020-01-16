@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {generateRandomNumbers} from '../utils'
-import Image from './Image'
+import GameImage from './GameImage'
 import Board from './Board'
 
 const hardGamePairNums = 12 ; 
@@ -9,7 +9,6 @@ const mediumGamePairNums = 6;
 const easyGamePairNums = 3; 
 
 
-var myarr = [];
 
 class MemoryGame extends Component {
 
@@ -64,9 +63,7 @@ class MemoryGame extends Component {
         var boardSize = this.stringLevelToNumber();
         var urls = generateRandomNumbers(boardSize);
         urls = urls.map((element, index) => { 
-          const img = new Image();
-          img.src = "pictures/"+imageType+"/"+element+".jpg";
-          myarr.push(img);
+          new Image().src =  "pictures/"+imageType+"/"+element+".jpg";
           return {key: index, url: "pictures/"+imageType+"/"+element+".jpg"}
         })
         this.setState({images: urls, boardSize: boardSize})
@@ -81,7 +78,7 @@ class MemoryGame extends Component {
       render(){
         const {images, selectedImages, foundPairs, boardSize} = this.state;
         var imagesComp = images.map(element => {
-          return <Image 
+          return <GameImage 
                     key={element.key} 
                     id={element.key}
                     image={element.url}  

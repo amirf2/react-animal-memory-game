@@ -10,7 +10,7 @@ const gridStyleArr=[gridStyleEasy,gridStyleMedium,gridStyleAdvanced,gridStyleHar
 const imageStyle = "img-thumbnail image-container"
 const imageAnimated = "animated flip delay-0s";
 
-class Image extends Component {
+class GameImage extends Component {
    
     render(){
 
@@ -38,5 +38,5 @@ class Image extends Component {
 
 
 
-export default Image;   
+export default GameImage;   
 
