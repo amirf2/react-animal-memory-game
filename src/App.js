@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MemoryGame from './Components/MemoryGame'
 import Sidebar from './Components/Sidebar'
 
+
 class App extends Component {
 
   constructor(props) {
