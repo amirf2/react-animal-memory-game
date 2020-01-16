@@ -19,7 +19,7 @@ class Board extends Component {
         return (
           <div onClick={this.handleClick}>
             {fireworks}
-           <div className="container-fluid">  
+            <div className="container-fluid">  
               <div className="text-center">
                <img src="pictures/titles/logo.png" alt="loading" className="image"/>
                </div>

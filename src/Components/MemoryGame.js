@@ -62,7 +62,8 @@ class MemoryGame extends Component {
         var boardSize = this.stringLevelToNumber();
         var urls = generateRandomNumbers(boardSize);
         urls = urls.map((element, index) => { 
-          new Image().src = "pictures/"+imageType+"/"+element+".jpg";
+          const img = new Image();
+          img.src = "pictures/"+imageType+"/"+element+".jpg";
           return {key: index, url: "pictures/"+imageType+"/"+element+".jpg"}
         })
         this.setState({images: urls, boardSize: boardSize})
