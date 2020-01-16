@@ -13,17 +13,6 @@ var confetti =
 
 class Board extends Component {
 
-
-  handleClick =() =>{
-    const { boardSize, foundPairs} = this.props
-    if (boardSize*2===foundPairs.length){
-      console.log("amira");
-      confetti = <Confetti
-        run={false}
-      />
-    }
-  }
-
     render(){
         const {images, boardSize, foundPairs} = this.props
         const fireworks = boardSize*2===foundPairs.length? confetti : undefined;
