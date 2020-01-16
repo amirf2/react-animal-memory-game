@@ -9,6 +9,8 @@ const mediumGamePairNums = 6;
 const easyGamePairNums = 3; 
 
 
+var myarr = [];
+
 class MemoryGame extends Component {
 
     constructor(props){
@@ -64,6 +66,7 @@ class MemoryGame extends Component {
         urls = urls.map((element, index) => { 
           const img = new Image();
           img.src = "pictures/"+imageType+"/"+element+".jpg";
+          myarr.push(img);
           return {key: index, url: "pictures/"+imageType+"/"+element+".jpg"}
         })
         this.setState({images: urls, boardSize: boardSize})
