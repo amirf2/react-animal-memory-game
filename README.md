@@ -1,7 +1,7 @@
 # react-animal-memory-game
 implementing memory game using react
 
-Demo: https://react-animal-memory-game.firebaseapp.com
+Demo: https://react-animal-memory-game.herokuapp.com/
 
 Instructions:
 1. Download/Clone Repository.
