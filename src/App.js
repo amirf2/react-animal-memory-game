@@ -30,14 +30,7 @@ class App extends Component {
     this.setState({game: ()=> <MemoryGame imageType={this.state.imageType} gameLevel={this.state.gameLevel}/>})
   }
 
-  handleCanvas = (canvas) => {
-    const ctx = canvas.getContext('2d');
-    ctx.fillStyle = 'purple';
-    ctx.fillRect(0, 0, 100, 100);
-  }
-
   render(){
-
 
     const MemoryGame = this.state.game;
 
